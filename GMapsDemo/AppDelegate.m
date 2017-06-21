@@ -6,6 +6,7 @@
 //  Copyright © 2017 Nayem BJIT. All rights reserved.
 //
 
+@import GoogleMaps;
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
@@ -16,7 +17,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self configureGMS];
     return YES;
 }
 
@@ -47,5 +48,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)configureGMS {
+    [GMSServices provideAPIKey:@"AIzaSyBhwxx4-9jDOKf5AQLOeZRlYAPrx33xf8M"];
+}
 
 @end
